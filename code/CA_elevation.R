@@ -1,17 +1,17 @@
 ##############################################################################
-## Geocode confidence level criteria 
+## Excessive Elevation Heterogeneity in California
 ## ------------
-## For coyotes observed by the California Department of Public Health (CDPH)
+## Used as a penalty layer for observation geocode confidence classification
 ##
 ## Created by: Ian Buller (@idblr)
-## Created on: July 27, 2018
+## Created on: September 17, 2018
 ##
 ## Modified by:
 ## Modified on:
 ##
 ## Notes:
-#   A) Sweave code for table listing the criteria for various levels of confidence in the geolocation of coyotes observed by CDPH
-#   B) Penalty uses an elevation heterogeneity layer of California (see CA_elevation.Rnw)
+#   A) Code for data sources and raster layer used as a penalty for geocode confidence classification (see geocode_confidence.Rnw)
+#   B) In collaboration with California Department of Public Health
 ##############################################################################
 
 
