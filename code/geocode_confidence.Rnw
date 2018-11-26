@@ -1,3 +1,19 @@
+% -------------------------------------------------------------- %
+% Geocode confidence level criteria 
+% ------------
+% For coyotes observed by the California Department of Public Health (CDPH)
+%
+% Created by: Ian Buller (@idblr)
+% Created on: July 27, 2018
+%
+% Modified by:
+% Modified on:
+%
+% Notes:
+% A) Sweave code for table listing the criteria for various levels of confidence in the geolocation of coyotes observed by CDPH
+% B) Penalty uses an elevation heterogeneity layer of California (see CA_elevation.Rnw)
+% -------------------------------------------------------------- %
+
 \documentclass[11pt]{article}
 
 \usepackage{geometry}

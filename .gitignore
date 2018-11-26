@@ -4,6 +4,7 @@
 
 # Session Data files
 .RData
+*.Rdata
 
 # Example code in package build process
 *-Ex.R
@@ -47,3 +48,9 @@ rsconnect/
 *.log
 *.xml
 *.gz
+
+# Other R packages and data
+*.rds
+*.grd
+*.vrt
+*.gri
