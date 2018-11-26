@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{letterpaper,
+          top=1in,
+          left=1in,
+          bottom=1in,
+          right=1in}
+%\setlength\parindent{0pt} %to remove automatic indentation
+
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+
+\usepackage[style=science, maxnames=1, bibencoding=utf8, backend=bibtex]{biblatex}
+
+\usepackage{enumitem} %for list formatting
+\usepackage{array} %for table formatting
+
+
+\newcolumntype{K}{>{\centering\arraybackslash}m{2cm}} %for wraptext in tabular at 2 cm
+\newcolumntype{P}{>{\arraybackslash}m{11cm}} %for wraptext in tabular at 11 cm
+\usepackage[labelfont=bf, font=small, skip=0pt]{caption} %for float caption formatting (bold, fontsize, and spacing)
+\newlength{\oldintextsep} %for spacing around figure and table wrapping
+\setlength{\oldintextsep}{\intextsep} %save spacing around float wrapping
+
+\def\@fnsymbol#1{\ensuremath{\ifcase#1\or *\or \dagger\or \ddagger\or
+   \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+   \or \ddagger\ddagger \else\@ctrerr\fi}} %for footnote symbols
+\newcommand{\ssymbol}[1]{^{\@fnsymbol{#1}}} %for footnote symbol call
+
+\begin{document}
+
+\setlength\intextsep{0pt}
+%\begin{wraptable}[21]{r}{0.9\textwidth}
+%\caption{Georeferencing criteria for animal-based plague surveillance in California}\label{tab:geocode}
+\scriptsize
+\begin{minipage}{0.9\textwidth}
+\centering
+\captionof{table}{Georeferencing criteria for animal-based plague surveillance in California} \label{tab:geocode}
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{K P}\hline
+\textbf{Geocode Confidence Level*} & \textbf{Criterion$\ssymbol{2}$}\\\hline
+1 &A specific location identifier ($\leq$ 16 km\textsuperscript{2} area), such as:\\
+ &\hspace{5mm}Precise location, small town, or medium town without a directional\\
+ &\hspace{5mm}Precise location with $\leq$ 6.8 km directional\\
+ &\hspace{5mm}Small town with $\leq$ 3.4 km directional\\
+ &\hspace{5mm}Road section $\leq$ 5.7 km long\\
+ &\hspace{5mm}Other defined location $\leq$ 16 km\textsuperscript{2} in area (e.g., small recreational area)\\\hline
+2 &A less specific location identifier (Between 16 km\textsuperscript{2} and 144 km\textsuperscript{2} area), such as:\\
+ &\hspace{5mm}Precise location with a directional between 6.8 km and 20.5 km\\
+ &\hspace{5mm}Small town with a directional between 4.3 km and 17.1 km\\
+ &\hspace{5mm}Medium town with a directional $\leq$ 13.7 km\\
+ &\hspace{5mm}Large town without a directional\\
+ &\hspace{5mm}Road section between 5.7 km and 17 km long\\
+ &\hspace{5mm}Other defined location between 16 km\textsuperscript{2} and 144 km\textsuperscript{2} (e.g., large reservoir)\\\hline
+3 &An unspecific location identifier ($>$ 144 km\textsuperscript{2} area), such as: \\
+ &\hspace{5mm}Precise location with a directional $>$ 20.5 km\\
+ &\hspace{5mm}Small town with a directional $>$ 17.1 km\\
+ &\hspace{5mm}Medium town with a directional $>$ 13.7 km\\
+ &\hspace{5mm}Large town with a directional\\
+ &\hspace{5mm}Extra large town with or without a directional\\
+ &\hspace{5mm}Road section $>$ 17 km long\\
+ &\hspace{5mm}Other defined location $>$ 144 km\textsuperscript{2} (e.g., Lake Tahoe)\\\hline
+4 &No location identifier, such as: \\
+  &\hspace{5mm}Uninterpretable location description \\\hline 
+\end{tabular}
+\flushleft
+*If a geocoded specimen is located in a grid cell (4 km x 4 km) with variable elevation (standard deviation of elevation greater than 125 meters calculated using the Shuttle Radar Topography Mission digital elevation model aggregated from 90 m x 90 m resolution to 4 km x 4 km resolution), then the specimen is penalized and dropped one geocode confidence level (e.g., from Geocode Confidence Level 1 to Geocode Confidence Level 2). Geocode Confidence Level 3 is the lowest classification (i.e., a specimen cannot drop from Geocode Confidence Level 3 to Geocode Confidence Level 4).
+
+$\ssymbol{2}$Precise location: $\leq$ 0.4 km\textsuperscript{2}; Small town: $\leq$ 4 km\textsuperscript{2}; Medium town: 4 km\textsuperscript{2} - 16 km\textsuperscript{2}; Large town: 16 km\textsuperscript{2} - 144 km\textsuperscript{2}; Extra large town: $>$ 144 km\textsuperscript{2}
+\end{minipage}
+%\end{wraptable}
+
+\end{document}

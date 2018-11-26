@@ -40,3 +40,10 @@ rsconnect/
 
 # OSX folders
 .DS_Store
+
+# LaTeX
+*.tex
+*.bib
+*.log
+*.xml
+*.gz
